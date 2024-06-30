@@ -1,0 +1,12 @@
+@Class
+@DefaultInit
+bundle File {
+    @Static val TYPE_TXT = 1;
+
+    @Init
+    fun _ (
+        @Val name: String,
+        @Val type: Int
+    ) = Unit
+}
+
