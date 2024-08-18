@@ -50,7 +50,11 @@ enum class Type {
     K_FUNCTION,
     K_BUNDLE,
     K_TYPE,
-    K_VARIABLE
+    K_VARIABLE,
+
+    ARRAY,
+    PAIR,
+    MAP,
 };
 
 #endif //TYPE_H

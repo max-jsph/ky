@@ -4,14 +4,19 @@
 
 #include "Value.h"
 
-Value::Value(any v, Type t): value(v), type(t) {}
+Value::Value(Any v, TypeSpec t): value(v), type(t) {}
 
-any Value::get_value() {
+Any Value::get_value() {
     return value;
 }
 
 
-Type Value::get_type() {
+TypeSpec Value::get_type_spec() {
     return type;
 }
+
+boolean_t Value::is_null() {
+    return value.hash_code() == 0;
+}
+
 

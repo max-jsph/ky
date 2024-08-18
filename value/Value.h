@@ -4,24 +4,27 @@
 
 #ifndef VALUE_H
 #define VALUE_H
-#include <any>
 
 #include "Element.h"
+#include "../types/Any.h"
 #include "../types/Type.h"
+#include "../types/TypeSpec.h"
 
 using namespace std;
 
 class Value: public Element{
     protected:
-    any value;
-    Type type;
+    Any value = null;
+    TypeSpec type;
 
     public:
-    Value(any v, Type t);
+    Value(Any v, TypeSpec t);
 
-    any get_value();
+    Any get_value();
 
-    Type get_type();
+    TypeSpec get_type_spec();
+
+    boolean_t is_null();
 };
 
 

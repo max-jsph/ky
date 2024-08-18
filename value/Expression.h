@@ -31,25 +31,21 @@ class Expression : public Element {
 
     Value solve();
 
-    Expression plus(Expression ohter);
+    Expression plus(Expression other);
 
-    Expression minus(Expression ohter);
+    Expression minus(Expression other);
 
-    Expression times(Expression ohter);
+    Expression times(Expression other);
 
-    Expression divide(Expression ohter);
+    Expression divide(Expression other);
 
-    Expression mod(Expression ohter);
+    Expression mod(Expression other);
 
-    Expression length_of(Expression ohter);
+    Expression length_of(Expression other);
 
-    Expression unary_plus(Expression ohter);
+    Expression unary_plus(Expression other);
 
-    Expression unary_minus(Expression ohter);
-
-    Expression inc(Expression ohter);
-
-    Expression dec(Expression ohter);
+    Expression unary_minus(Expression other);
 };
 
 

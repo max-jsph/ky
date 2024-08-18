@@ -24,4 +24,24 @@ add_executable(untitled main.cpp
         value/Ref.cpp
         value/Ref.h
         value/Call.cpp
-        value/Call.h)
+        value/Call.h
+        types/number/Short.cpp
+        types/number/Short.h
+        types/Any.cpp
+        types/Any.h
+        types/String.cpp
+        types/String.h
+        runtime/Scope.cpp
+        runtime/Scope.h
+        runtime/Element.cpp
+        runtime/Element.h
+        runtime/variable/Variable.cpp
+        runtime/variable/Variable.h
+        runtime/NamedElement.cpp
+        runtime/NamedElement.h
+        Utils.cpp
+        Utils.h
+        types/TypeSpec.cpp
+        types/TypeSpec.h
+        types/TypeSpec.h
+)

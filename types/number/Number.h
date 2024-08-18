@@ -6,6 +6,8 @@
 #define NUMBER_H
 #include <cstdint>
 
+#include "../Any.h"
+
 using namespace std;
 
 class Byte;
@@ -22,11 +24,13 @@ class Float;
 class Double;
 
 template<class T>
-class Number {
+class Number: public Any{
     protected:
     ~Number() = default;
 
-    private:
+    public:
+    virtual T get() = 0;
+
     virtual Byte to_byte() = 0;
     virtual Short to_short() = 0;
     virtual Int to_int() = 0;
@@ -39,6 +43,10 @@ class Number {
 
     virtual Float to_float() = 0;
     virtual Double to_double() = 0;
+
+    string_t to_string() override;
+
+    long_t hash_code() override;
 };
 
 

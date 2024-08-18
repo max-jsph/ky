@@ -1,21 +1,18 @@
 //
-// Created by Ky Dicker on 30/06/2024.
+// Created by Ky Dicker on 03/07/2024.
 //
 
-#ifndef INT_H
-#define INT_H
+#ifndef SHORT_H
+#define SHORT_H
+
 #include "Number.h"
 #include "../Type.h"
 
+class Short: public Number<short_t>{
+    protected:
+    ~Short() = default;
 
-class Int: public Number<int_t>{
-    int_t value;
-
-    public:
-    explicit Int(int_t value);
-
-    int get() override;
-
+    private:
     Byte to_byte() override;
 
     Short to_short() override;
@@ -35,10 +32,8 @@ class Int: public Number<int_t>{
     Float to_float() override;
 
     Double to_double() override;
-
-    string_t to_string() override;
 };
 
 
 
-#endif //INT_H
+#endif //SHORT_H

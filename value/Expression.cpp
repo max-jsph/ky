@@ -39,44 +39,30 @@ Expression Expression::plus(Expression other) {
     return infix(Operator::PLUS, other);
 }
 
-Expression Expression::minus(Expression ohter) {
-    auto op = Operator(Operator::MINUS);
-
-    values.push_back(op);
-    values.push_back(ohter);
+Expression Expression::minus(Expression other) {
+    return infix(Operator::MINUS, other);
 }
 
-Expression Expression::times(Expression ohter) {
-    auto op = Operator(Operator::TIMES);
-
-    values.push_back(op);
-    values.push_back(ohter);
+Expression Expression::times(Expression other) {
+    return infix(Operator::TIMES, other);
 }
 
-Expression Expression::divide(Expression ohter) {
-    auto op = Operator(Operator::DIVIDE);
-
-    values.push_back(op);
-    values.push_back(ohter);
+Expression Expression::divide(Expression other) {
+    return infix(Operator::DIVIDE, other);
 }
 
-Expression Expression::mod(Expression ohter) {
-    auto op = Operator(Operator::MOD);
-
-    values.push_back(op);
-    values.push_back(ohter);
+Expression Expression::mod(Expression other) {
+    return infix(Operator::MOD, other);
 }
 
-Expression Expression::unary_plus(Expression ohter) {
-    auto op = Operator(Operator::UNARY_PLUS);
-
-    values.push_back(op);
-    values.push_back(ohter);
+Expression Expression::unary_plus(Expression other) {
+    return prefix(Operator::PLUS, other);
 }
 
-Expression Expression::unary_minus(Expression ohter) {
-    auto op = Operator(Operator::UNARY_MINUS);
+Expression Expression::unary_minus(Expression other) {
+    return prefix(Operator::MINUS, other);
+}
 
-    values.push_back(op);
-    values.push_back(ohter);
+Expression Expression::length_of(Expression other) {
+    return prefix(Operator::LENGTH_OF, other);
 }
